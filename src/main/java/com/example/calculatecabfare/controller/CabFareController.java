@@ -25,12 +25,14 @@ public class CabFareController {
     }
 
     @GetMapping(path="/all")
-    public List<CabFare> allCabs() {
-        return cabFareService.findAll();
+    public List<String> allCabs() {
+        return cabFareService.findAllCabs();
     }
 
     @GetMapping(value = "findCabFareByType/{typeOfCab}",produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Double> findCabFareByType(@PathVariable("typeOfCab") String typeOfCab){
         return cabFareService.findCabFareByType(typeOfCab);
     }
+
+
 }

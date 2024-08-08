@@ -22,7 +22,7 @@ public class CabFareService {
         return cabFareRepository.findAll();
     }
 
-    public List<CabFare> findAllCabs(){
+    public List<String> findAllCabs(){
         return cabFareRepository.findAllCabs();
     }
 }

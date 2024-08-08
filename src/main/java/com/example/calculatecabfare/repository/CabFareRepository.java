@@ -12,10 +12,10 @@ import java.util.List;
 @Repository
 public interface CabFareRepository extends JpaRepository<CabFare, Integer> {
 
-    @Query("select amount from CabFare where typeOfCab>:typeOfCab")
+    @Query("select c.amount from CabFare c where c.typeOfCab = :typeOfCab")
     public List<Double> findCabFareByType(@Param("typeOfCab") String typeOfCab);
 
-    @Query("select typeOfCab from CabFare")
-    public List<CabFare> findAllCabs();
+    @Query("select c.typeOfCab from CabFare c")
+    public List<String> findAllCabs();
 
 }
