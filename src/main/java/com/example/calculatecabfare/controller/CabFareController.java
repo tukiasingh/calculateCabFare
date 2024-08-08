@@ -19,11 +19,6 @@ public class CabFareController {
     @Autowired
     CabFareService cabFareService;
 
-    @GetMapping(path="/hi")
-    public String hi() {
-        return "hi";
-    }
-
     @GetMapping(path="/all")
     public List<String> allCabs() {
         return cabFareService.findAllCabs();

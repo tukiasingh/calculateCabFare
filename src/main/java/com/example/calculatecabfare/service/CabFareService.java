@@ -18,10 +18,6 @@ public class CabFareService {
         return cabFareRepository.findCabFareByType(typeOfCab);
     }
 
-    public List<CabFare> findAll() {
-        return cabFareRepository.findAll();
-    }
-
     public List<String> findAllCabs(){
         return cabFareRepository.findAllCabs();
     }
